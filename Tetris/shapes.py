@@ -1,0 +1,13 @@
+from config import *
+
+SHAPES = [
+    [[1,1,1,1]],       # I
+    [[1,1],[1,1]],     # O
+    [[1,1,1],[0,1,0]], # T
+    [[1,1,1],[1,0,0]], # L
+    [[1,1,1],[0,0,1]], # J
+    [[0,1,1],[1,1,0]], # S
+    [[1,1,0],[0,1,1]]  # Z
+]
+
+SHAPE_COLORS = [CYAN, YELLOW, MAGENTA, ORANGE, BLUE, GREEN, RED]
