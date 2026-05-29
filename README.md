@@ -1,27 +1,27 @@
 # course_tetris
 
-录制：
-python aiplay.py \
+## 录制：
+```python aiplay.py \
   --record-placement-dataset \
   --record-actors player \
   --record-frame board
+```
 
-
-训练：
-python train_afterstate_bc.py \
+## 训练：
+```python train_afterstate_bc.py \
   --data-root screenshot_datasets \
   --actor player \
   --epochs 40 \
   --batch-size 8 \
   --output-dir afterstate_bc_player_test \
   --split-by session
+```
 
+## 运行：
+```python aiplay.py --ai rl --checkpoint afterstate_bc_player_test/best.pt
+   --python aiplay.py --ai rl --checkpoint afterstate_model2_player_v2/best.pt
 
-运行：
-python aiplay.py --ai rl --checkpoint afterstate_bc_player_test/best.pt
-
-python aiplay.py --ai rl --checkpoint afterstate_model2_player_v2/best.pt
-
+```
 
 
 
@@ -44,8 +44,7 @@ Afterstate DQN / Afterstate Value Learning
 网络：rl_value_net.py
 训练循环：train_rl_shared.py
 环境：rl_shared_env.py
-一句话总结：
-当前强化学习用的是“基于 DQN 思路的 afterstate 价值网络”，底层网络是 PyTorch 的 MLP。
+
 
 
 ## 环境要求
